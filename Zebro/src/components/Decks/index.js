@@ -14,9 +14,7 @@ var Button = React.createClass({
   },
   render: function() {
     return (
-      <TouchableHighlight
-        onPress={this.props.onPress}
-        style={[styles.button, this.props.styles]}>
+      <TouchableHighlight onPress={this.props.onPress} style={styles.button}>
         {this.props.children}
       </TouchableHighlight>
       );
@@ -25,7 +23,7 @@ var Button = React.createClass({
 
 var Decks = React.createClass({
   propTypes: {
-    decks: React.PropTypes.array.isRequired
+    decks: React.PropTypes.array.isRequired    
   },
   review: function(deckName) {
     console.log('review ' + deckName);
@@ -38,23 +36,17 @@ var Decks = React.createClass({
               onReview={this.review} />
         <Deck name="JLPT N5 Kanji"
               onReview={this.review} />
-        <Button styles={styles.wideButton}>
+        <Button>
           <Text>Create Deck</Text>
         </Button>
       </View>
-    );
+      );
   }
 });
 
 var styles = StyleSheet.create({
   container: {
     backgroundColor: '#EEEEDD',
-  },
-  wideButton: {
-    justifyContent: 'center',
-    flex: 1,
-    padding: 10,
-    margin: 10
   },
   button: {
     backgroundColor: '#FFFF00'

@@ -1,7 +1,7 @@
 var Reflux = require('reflux');
 
 var actions = Reflux.createActions({
-  addDeck: {}
+  reviewDeck: {}
 });
 
 module.exports = actions;
