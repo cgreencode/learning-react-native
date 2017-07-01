@@ -3,7 +3,6 @@ import { AppRegistry, StyleSheet, Text, View } from "react-native";
 
 import _ from "lodash";
 import Video from "react-native-video";
-
 import HelloWorld from "./HelloWorld";
 
 export default class Depends extends Component {
